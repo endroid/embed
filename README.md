@@ -7,11 +7,33 @@
 [![Total Downloads](http://img.shields.io/packagist/dt/endroid/embed.svg)](https://packagist.org/packages/endroid/embed)
 [![License](http://img.shields.io/packagist/l/endroid/embed.svg)](https://packagist.org/packages/endroid/embed)
 
-Library for embedding resources.
+Library for embedding external resources and reduce the number of requests.
 
 ## Installation
 
+Use [Composer](https://getcomposer.org/) to install the library.
+
+``` bash
+$ composer require endroid/embed
+```
+
 ## Usage
+
+This library helps you reduce the number of external resources to load by
+allowing you to embed external resources via a Twig extension. You can use this
+extension to embed resources like fonts, stylesheets, scripts etc.
+
+```php
+<link rel="stylesheet" href="{{ embed(asset('/styles.css')) }}">
+
+<style>
+@font-face {
+    font-family: 'SCP';
+    font-weight: normal;
+    src: url('{{ embed('https://fontlibrary.org/scp.ttf') }}');
+}
+</style>
+```
 
 ## Versioning
 
