@@ -7,7 +7,7 @@
 [![Total Downloads](http://img.shields.io/packagist/dt/endroid/embed.svg)](https://packagist.org/packages/endroid/embed)
 [![License](http://img.shields.io/packagist/l/endroid/embed.svg)](https://packagist.org/packages/endroid/embed)
 
-Library for embedding external resources and reduce the number of requests.
+Library for embedding external resources and reduce the number of requests.<br />
 Read the [blog](https://medium.com/@endroid/pdf-generation-in-symfony-3080702353b)
 for more information on why I created this extension.
 
