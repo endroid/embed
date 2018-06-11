@@ -11,14 +11,6 @@ Library for embedding external resources and reduce the number of requests.
 Read the [blog](https://medium.com/@endroid/pdf-generation-in-symfony-3080702353b)
 for more information on why I created this extension.
 
-## Installation
-
-Use [Composer](https://getcomposer.org/) to install the library.
-
-``` bash
-$ composer require endroid/embed
-```
-
 ## Usage
 
 This library helps you reduce the number of external resources to load by
@@ -36,6 +28,17 @@ extension to embed resources like fonts, stylesheets, scripts etc.
 }
 </style>
 ```
+
+## Installation
+
+Use [Composer](https://getcomposer.org/) to install the library.
+
+``` bash
+$ composer require endroid/embed
+```
+
+When you use Symfony, the [installer](https://github.com/endroid/installer)
+makes sure that services are automatically wired.
 
 ## Versioning
 
