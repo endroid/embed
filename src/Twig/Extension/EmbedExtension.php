@@ -25,7 +25,7 @@ class EmbedExtension extends AbstractExtension
     public function getFunctions(): array
     {
         return [
-            new TwigFunction('embed', array($this, 'embed')),
+            new TwigFunction('embed', [$this, 'embed']),
         ];
     }
 
