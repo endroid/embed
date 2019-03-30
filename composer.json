@@ -15,7 +15,7 @@
         "php": ">=7.2",
         "ext-fileinfo": "*",
         "endroid/installer": "^1.1.5",
-        "twig/extensions": "^1.0"
+        "twig/twig": "^2.4"
     },
     "require-dev": {
         "endroid/test": "^1.1.2"
