@@ -11,19 +11,11 @@ declare(strict_types=1);
 
 namespace Endroid\Embed\Twig\Extension;
 
-use Symfony\Component\HttpKernel\KernelInterface;
 use Twig\Extension\AbstractExtension;
 use Twig\TwigFunction;
 
 class EmbedExtension extends AbstractExtension
 {
-    private $kernel;
-
-    public function __construct(KernelInterface $kernel)
-    {
-        $this->kernel = $kernel;
-    }
-
     public function getFunctions(): array
     {
         return [
@@ -33,7 +25,7 @@ class EmbedExtension extends AbstractExtension
 
     public function embed(string $source): string
     {
-        $data = file_get_contents($source);
+        $data = (string) file_get_contents($source);
         $data = 'data:'.$this->getMimeType($data).';base64,'.base64_encode($data);
 
         return $data;
