@@ -34,7 +34,17 @@ class EmbedExtension extends AbstractExtension
     private function getMimeType(string $data): string
     {
         $fileInfo = finfo_open();
+
+        if (false === $fileInfo) {
+            throw new \Exception('Could not retrieve file info');
+        }
+
         $mimeType = finfo_buffer($fileInfo, $data, FILEINFO_MIME_TYPE);
+
+        if (false === $mimeType) {
+            throw new \Exception('Could not retrieve mime type');
+        }
+
         finfo_close($fileInfo);
 
         return $mimeType;
