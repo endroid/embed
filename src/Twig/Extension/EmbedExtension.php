@@ -16,7 +16,7 @@ use Twig\TwigFunction;
 
 class EmbedExtension extends AbstractExtension
 {
-    public function getFunctions(): array
+    public function getFunctions()
     {
         return [
             new TwigFunction('embed', [$this, 'embed']),
