@@ -14,11 +14,15 @@
     "require": {
         "php": ">=7.2",
         "ext-fileinfo": "*",
-        "endroid/installer": "^1.1.5",
+        "endroid/installer": "^1.2.2",
         "twig/twig": "^2.4||^3.0"
     },
     "require-dev": {
-        "endroid/test": "dev-master"
+        "endroid/quality": "dev-master"
+    },
+    "suggest": {
+        "roave/security-advisories": "Avoids installation of package versions with vulnerabilities",
+        "symfony/security-checker": "Checks your composer.lock for vulnerabilities"
     },
     "autoload": {
         "psr-4": {
