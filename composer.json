@@ -12,10 +12,10 @@
         }
     ],
     "require": {
-        "php": "^7.4||^8.0",
+        "php": "^8.0",
         "ext-fileinfo": "*",
         "endroid/installer": "^1.3.1",
-        "twig/twig": "^2.4||^3.0"
+        "twig/twig": "^3.0"
     },
     "require-dev": {
         "endroid/quality": "dev-master"
@@ -39,6 +39,9 @@
         }
     },
     "config": {
-        "sort-packages": true
+        "sort-packages": true,
+        "allow-plugins": {
+            "endroid/installer": true
+        }
     }
 }
