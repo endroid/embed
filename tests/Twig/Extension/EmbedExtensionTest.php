@@ -6,7 +6,7 @@ namespace Endroid\Embed\Tests\Twig\Extension;
 
 use PHPUnit\Framework\TestCase;
 
-class PdfBuilderTest extends TestCase
+class EmbedExtensionTest extends TestCase
 {
     public function testNoTestsYet()
     {
