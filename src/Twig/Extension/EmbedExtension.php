@@ -7,7 +7,7 @@ namespace Endroid\Embed\Twig\Extension;
 use Twig\Extension\AbstractExtension;
 use Twig\TwigFunction;
 
-class EmbedExtension extends AbstractExtension
+final class EmbedExtension extends AbstractExtension
 {
     public function getFunctions(): array
     {

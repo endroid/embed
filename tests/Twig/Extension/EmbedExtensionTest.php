@@ -6,9 +6,9 @@ namespace Endroid\Embed\Tests\Twig\Extension;
 
 use PHPUnit\Framework\TestCase;
 
-class EmbedExtensionTest extends TestCase
+final class EmbedExtensionTest extends TestCase
 {
-    public function testNoTestsYet()
+    public function testNoTestsYet(): void
     {
         $this->assertTrue(true);
     }
