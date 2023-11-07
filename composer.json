@@ -18,7 +18,7 @@
         "twig/twig": "^3.0"
     },
     "require-dev": {
-        "endroid/quality": "dev-master"
+        "endroid/quality": "dev-main"
     },
     "suggest": {
         "roave/security-advisories": "Avoids installation of package versions with vulnerabilities"
@@ -35,7 +35,7 @@
     },
     "extra": {
         "branch-alias": {
-            "dev-master": "1.x-dev"
+            "dev-main": "1.x-dev"
         }
     },
     "config": {
