@@ -9,6 +9,7 @@ use Twig\TwigFunction;
 
 final class EmbedExtension extends AbstractExtension
 {
+    #[\Override]
     public function getFunctions(): array
     {
         return [
@@ -20,24 +21,16 @@ final class EmbedExtension extends AbstractExtension
     {
         $data = (string) file_get_contents($source);
 
-        return 'data:'.$this->getMimeType($data).';base64,'.base64_encode($data);
+        return 'data:' . $this->getMimeType($data) . ';base64,' . base64_encode($data);
     }
 
     private function getMimeType(string $data): string
     {
-        $fileInfo = finfo_open();
-
-        if (false === $fileInfo) {
-            throw new \Exception('Could not retrieve file info');
-        }
-
-        $mimeType = finfo_buffer($fileInfo, $data, FILEINFO_MIME_TYPE);
+        $mimeType = new \finfo(FILEINFO_MIME_TYPE)->buffer($data);
 
         if (false === $mimeType) {
             throw new \Exception('Could not retrieve mime type');
         }
-
-        finfo_close($fileInfo);
 
         return $mimeType;
     }
